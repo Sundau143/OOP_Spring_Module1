@@ -1,0 +1,72 @@
+1. Добавление нового автора:
+
+Method: POST
+Host: http://localhost:8080/addAuthor
+Content-Type: application/json
+
+// тело запроса
+{
+    "fistname": "Ivan",
+    "lastname": "Ivanov",
+    "middlename": "Ivanovich"
+}
+
+2. Изменение книги с указанным id:
+
+Method: PUT
+Host: http://localhost:8080/changeBookById
+Content-Type: application/json
+
+// тело запроса
+{
+    "booktitle": "Book 1",
+    "bookyear": 1965,
+    "bookprice": 564,
+    "id": 6
+}
+
+3. Удаление книг, выпущенных между XXXX и YYYY годами с указанным id:
+
+Method: DELETE 
+Host: http://localhost:8080/deleteBookByIdAndYears
+Content-Type: application/json
+
+// тело запроса
+{
+    "firstyear": 2008,
+    "secondyear": 2010,
+    "id": 5
+}
+
+4. Удаление автора с указанным id:
+
+Method: DELETE 
+Host: http://localhost:8080/addAuthor/deleteAuthorById
+Content-Type: application/json
+
+// тело запроса
+{
+    "id": 6
+}
+
+5. Получение списка книг автора с указанной фамилией:
+
+Method: GET 
+Host: http://localhost:8080/getBooksByAuthor
+
+// тело запроса
+{
+    "lastname": "Ivanov"
+}
+
+6. Получение списка книг, выпущенных между XXXX и YYYY годами:
+
+Method: GET 
+Host: http://localhost:8080/getAllBooksInYears
+
+// тело запроса
+{
+    "firstyear": "2006",
+    "secondyear": "2010"
+}
+
